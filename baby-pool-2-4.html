@@ -301,7 +301,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   buildLetterGrid();
   loadHunches();
-  hunchesVisible = localStorage.getItem('hunchesVisible') === 'true';
 });
 
 function buildLetterGrid() {
@@ -342,6 +341,7 @@ async function loadHunches() {
     const data = await res.json();
     if (data.success) {
       hunches = data.hunches || [];
+      hunchesVisible = data.revealed === true;
       renderHunches();
     }
   } catch(e) {
@@ -530,11 +530,11 @@ function lockAdmin() {
   document.getElementById('admin-panel').style.display = 'none';
 }
 
-function toggleHunches() {
+async function toggleHunches() {
   hunchesVisible = !hunchesVisible;
-  localStorage.setItem('hunchesVisible', hunchesVisible);
   renderHunches();
   event.target.textContent = hunchesVisible ? 'Hide Guesses' : 'Reveal Guesses';
+  await fetch(SCRIPT_URL + '?action=setRevealed&value=' + hunchesVisible);
 }
 
 function scoreHunches() {
