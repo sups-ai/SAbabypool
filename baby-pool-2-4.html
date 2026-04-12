@@ -471,14 +471,16 @@ function fmtDate(d) {
 }
 function fmtTime(t) {
   if (!t) return '';
-  // Handle decimal format from Google Sheets (e.g. 0.125 = 3:00 AM)
-  if (!isNaN(t) && t < 1) {
-    const totalMins = Math.round(parseFloat(t) * 24 * 60);
-    let h = Math.floor(totalMins / 60);
-    let min = totalMins % 60;
-    const ampm = h >= 12 ? 'PM' : 'AM';
-    h = h % 12 || 12;
-    return `${h}:${min.toString().padStart(2,'0')} ${ampm}`;
+  // Handle Google Sheets datetime format (1899-12-30T...)
+  if (t.includes('T')) {
+    const date = new Date(t);
+    if (!isNaN(date)) {
+      let h = date.getUTCHours();
+      let min = date.getUTCMinutes();
+      const ampm = h >= 12 ? 'PM' : 'AM';
+      h = h % 12 || 12;
+      return `${h}:${min.toString().padStart(2,'0')} ${ampm}`;
+    }
   }
   let [h,min] = t.split(':');
   h = parseInt(h);
