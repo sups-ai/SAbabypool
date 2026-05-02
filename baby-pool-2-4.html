@@ -763,7 +763,7 @@ function renderHunches() {
         ${(lbsOk||ozOk) ? `<span>Weight: ${lbsOk?h.lbs:'?'} lbs ${ozOk?h.oz:'?'} oz</span>` : ''}
         ${h.len  ? `<span>Length: ${h.len} in</span>` : ''}
         ${h.letter ? `<span>Letter: "${h.letter}"</span>` : ''}
-        ${h.special ? `<span>${currentSpecialQuestion ? currentSpecialQuestion.question.split('?')[0].split(' ').slice(-2).join(' ') : 'Special'}: ${h.special}</span>` : ''}
+        ${h.special ? `<span>Cried First: ${h.special}</span>` : ''}
       </div>` : `<div class="guesses-hidden">Guesses sealed until deadline</div>`;
     return `
       <div class="hunch-card${isWinner ? ' winner-card' : ''}">
