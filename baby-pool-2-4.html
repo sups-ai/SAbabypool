@@ -15,7 +15,7 @@
 }
 html{scroll-behavior:smooth}
 body{font-family:'Nunito Sans',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;}
- 
+
 /* ---- HEADER ---- */
 .site-header{background:var(--forest);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
 .logo{font-family:'Lora',serif;font-size:20px;color:var(--sage-pale);letter-spacing:1px;font-weight:500;cursor:default;}
@@ -23,7 +23,7 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--cream);color:var(--te
 .header-btn{background:var(--sage);border:none;color:white;padding:9px 22px;border-radius:20px;font-size:13px;cursor:pointer;font-family:'Nunito Sans',sans-serif;font-weight:500;transition:background 0.2s;}
 .header-btn:hover{background:var(--sage-light)}
 .header-btn.hidden{display:none}
- 
+
 /* ---- HERO ---- */
 .hero{background:linear-gradient(160deg,var(--forest) 0%,#3a6b50 40%,var(--sage) 100%);padding:60px 24px 50px;text-align:center;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
@@ -34,12 +34,12 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--cream);color:var(--te
 .deadline-pill{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.9);padding:5px 18px;border-radius:20px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-family:'Nunito Sans',sans-serif;font-weight:500;margin-bottom:24px;position:relative;z-index:1;}
 .cta-btn{display:inline-block;background:white;color:var(--forest);padding:13px 36px;border-radius:24px;font-size:14px;font-weight:600;cursor:pointer;border:none;letter-spacing:0.3px;transition:all 0.2s;font-family:'Nunito',sans-serif;position:relative;z-index:1;}
 .cta-btn:hover{background:var(--sage-pale);transform:translateY(-1px)}
- 
+
 /* ---- MAIN ---- */
 .main{max-width:640px;margin:0 auto;padding:40px 20px 60px}
 .section-label{font-family:'Nunito Sans',sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--sage);margin-bottom:20px;font-weight:600;display:flex;align-items:center;gap:12px;}
 .section-label::after{content:'';flex:1;height:1px;background:var(--border)}
- 
+
 /* ---- WINNER SPOTLIGHT ---- */
 .winner-spotlight{display:none;background:linear-gradient(135deg,#2d5540 0%,#4a7c59 100%);border-radius:14px;padding:28px 24px;margin-bottom:32px;border:2px solid var(--gold);position:relative;overflow:hidden;}
 .winner-spotlight::before{content:'🏆';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:48px;opacity:0.15;}
@@ -48,7 +48,7 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--cream);color:var(--te
 .winner-spotlight-name{font-family:'Lora',serif;font-size:26px;font-style:italic;color:white;margin-bottom:6px;}
 .winner-spotlight-score{font-size:13px;color:var(--sage-pale);font-family:'Nunito Sans',sans-serif;letter-spacing:0.5px;}
 .winner-spotlight-detail{font-size:12px;color:rgba(255,255,255,0.6);font-family:'Nunito',sans-serif;margin-top:8px;line-height:1.6;}
- 
+
 /* ---- FORM CARD ---- */
 .form-card{background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 20px rgba(45,85,64,0.06);}
 .form-instructions{background:var(--sage-ultra);padding:13px 24px;font-size:13px;color:var(--muted);border-bottom:1px solid var(--border);font-family:'Nunito',sans-serif;font-weight:400;text-align:center;}
@@ -57,27 +57,27 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--cream);color:var(--te
 .field-group:hover{background:#fdfffe}
 .field-label{font-family:'Nunito Sans',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:8px;display:block;font-weight:600;}
 .field-hint{font-size:13px;color:var(--muted);margin-bottom:10px;font-family:'Nunito',sans-serif;font-weight:300}
- 
+
 input[type="text"],input[type="email"],input[type="date"],input[type="time"],select,textarea{width:100%;border:1.5px solid var(--border);border-radius:8px;padding:10px 14px;font-family:'Nunito Sans',sans-serif;font-size:14px;color:var(--text);background:var(--cream);transition:border-color 0.2s,box-shadow 0.2s;outline:none;}
 input:focus,select:focus,textarea:focus{border-color:var(--sage);box-shadow:0 0 0 3px rgba(74,124,89,0.08);}
 .weight-row{display:flex;gap:10px;align-items:center}
 .weight-row input{flex:1}
 .weight-row span{color:var(--muted);font-size:13px;white-space:nowrap;font-family:'Nunito',sans-serif}
- 
+
 .letter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(32px,1fr));gap:5px;margin-top:4px;}
 .letter-btn{padding:7px 0;border:1.5px solid var(--border);border-radius:6px;background:var(--cream);font-size:13px;font-weight:500;color:var(--text);cursor:pointer;text-align:center;transition:all 0.12s;font-family:'Nunito',sans-serif;}
 .letter-btn:hover{border-color:var(--sage);background:var(--sage-ultra)}
 .letter-btn.selected{background:var(--sage);color:white;border-color:var(--sage)}
- 
+
 .choice-group{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
 .choice-btn{padding:10px 28px;border:1.5px solid var(--border);border-radius:24px;background:var(--cream);font-size:14px;color:var(--text);cursor:pointer;transition:all 0.12s;font-family:'Nunito',sans-serif;font-weight:500;}
 .choice-btn:hover{border-color:var(--sage);background:var(--sage-ultra)}
 .choice-btn.selected{background:var(--sage);color:white;border-color:var(--sage)}
- 
+
 .field-group.new-q{background:linear-gradient(135deg,#f0f8f3 0%,#faf9f7 100%);border-left:3px solid var(--sage);}
 .new-badge{display:inline-block;background:var(--sage);color:white;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:10px;margin-left:8px;vertical-align:middle;font-family:'Nunito Sans',sans-serif;}
 .section-divider{background:var(--sage-ultra);padding:10px 24px;font-size:10px;letter-spacing:2.5px;font-weight:600;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-family:'Nunito Sans',sans-serif;}
- 
+
 .notif-row{display:flex;gap:10px;margin-top:4px}
 .notif-btn{padding:8px 20px;border:1.5px solid var(--border);border-radius:20px;background:var(--cream);font-size:13px;color:var(--text);cursor:pointer;transition:all 0.12s;font-family:'Nunito',sans-serif;font-weight:500;}
 .notif-btn:hover{border-color:var(--sage)}
@@ -86,25 +86,25 @@ input:focus,select:focus,textarea:focus{border-color:var(--sage);box-shadow:0 0 
 #email-fields.visible{display:block}
 .email-note{font-size:11px;color:var(--muted);margin-top:6px;font-family:'Nunito',sans-serif}
 textarea{resize:vertical;min-height:70px}
- 
+
 .submit-btn{width:100%;background:var(--forest);color:white;border:none;padding:16px;font-size:14px;font-family:'Nunito',sans-serif;font-weight:600;cursor:pointer;transition:background 0.2s;letter-spacing:0.5px;}
 .submit-btn:hover{background:var(--sage)}
 .submit-btn:disabled{background:var(--muted);cursor:not-allowed;}
- 
+
 /* ---- LOADING ---- */
 .loading-bar{height:3px;background:var(--sage-pale);border-radius:2px;overflow:hidden;margin-bottom:16px;display:none;}
 .loading-bar.active{display:block;}
 .loading-bar::after{content:'';display:block;height:100%;width:40%;background:var(--sage);border-radius:2px;animation:slide 1.2s infinite ease-in-out;}
 @keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(350%)}}
- 
+
 .status-msg{text-align:center;font-size:13px;font-family:'Nunito',sans-serif;padding:10px;border-radius:8px;margin-bottom:12px;display:none;}
 .status-msg.error{background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;display:block;}
 .status-msg.info{background:var(--sage-ultra);color:var(--sage);border:1px solid var(--sage-pale);display:block;}
- 
+
 /* ---- ENTRIES ---- */
 .empty-state{text-align:center;padding:40px 20px;color:var(--muted);font-size:13px;background:white;border:1px solid var(--border);border-radius:12px;font-family:'Nunito',sans-serif;}
 .empty-state .icon{font-size:30px;margin-bottom:10px;font-family:'Lora',serif;color:var(--sage-light);font-style:italic;}
- 
+
 .hunch-card{background:white;border-radius:10px;padding:16px 20px;margin-bottom:10px;border:1px solid var(--border);border-left:3px solid var(--sage);transition:box-shadow 0.15s;}
 .hunch-card:hover{box-shadow:0 4px 16px rgba(45,85,64,0.08)}
 .hunch-card.winner-card{border-left-color:var(--gold);background:linear-gradient(135deg,#fffdf5 0%,#fafff8 100%);}
@@ -113,12 +113,12 @@ textarea{resize:vertical;min-height:70px}
 .hunch-detail{font-size:12px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;font-family:'Nunito',sans-serif;font-weight:400}
 .guesses-hidden{font-size:12px;color:var(--sage);font-family:'Nunito',sans-serif;font-style:italic;background:var(--sage-ultra);border-radius:6px;padding:5px 12px;display:inline-block;border:1px solid var(--sage-pale)}
 .hunch-comment{margin-top:8px;font-size:13px;color:var(--muted);font-style:italic;font-family:'Lora',serif;}
- 
+
 .rank-badge{display:inline-flex;align-items:center;background:var(--sage-pale);color:var(--forest);font-size:11px;font-family:'Nunito Sans',sans-serif;font-weight:700;padding:2px 9px;border-radius:10px;letter-spacing:0.5px;flex-shrink:0;}
 .rank-winner{background:var(--gold);color:white;}
 .score-badge{display:inline-block;background:var(--sage-ultra);color:var(--sage);font-size:11px;font-family:'Nunito',sans-serif;font-weight:600;padding:2px 10px;border-radius:10px;border:1px solid var(--border);}
 .score-badge.winner-badge{background:var(--sage);color:white;}
- 
+
 /* ---- ADMIN PANEL ---- */
 .admin-panel{background:var(--forest);color:white;border-radius:12px;padding:28px;margin-bottom:32px;border:1px solid rgba(255,255,255,0.1);}
 .admin-title{font-family:'Lora',serif;font-size:22px;font-style:italic;color:var(--sage-pale);margin-bottom:4px;}
@@ -146,24 +146,24 @@ textarea{resize:vertical;min-height:70px}
 .admin-label{font-size:10px;color:var(--accent);letter-spacing:2px;text-transform:uppercase;display:block;margin-bottom:6px;font-family:'Nunito Sans',sans-serif;font-weight:600;}
 .special-options-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;}
 .results-submitted-banner{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:14px 18px;margin-bottom:16px;font-size:13px;color:var(--sage-pale);font-family:'Nunito',sans-serif;line-height:1.6;}
- 
+
 /* ---- LOCK BANNER ---- */
 .lock-banner{background:var(--sage-ultra);border:1px solid var(--sage-pale);border-radius:10px;padding:14px 20px;margin-bottom:24px;font-size:13px;color:var(--sage);font-family:'Nunito',sans-serif;text-align:center;}
- 
+
 /* ---- COLLAPSED FORM ---- */
 .hunches-collapsed{background:var(--sage-ultra);border:1px solid var(--sage-pale);border-radius:12px;padding:20px 24px;text-align:center;margin-bottom:8px;}
 .hunches-collapsed p{font-family:'Lora',serif;font-style:italic;color:var(--sage);font-size:16px;margin-bottom:4px;}
 .hunches-collapsed span{font-size:12px;color:var(--muted);font-family:'Nunito',sans-serif;}
- 
+
 /* ---- TOAST ---- */
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--forest);color:white;padding:13px 28px;border-radius:24px;font-size:13px;font-family:'Nunito',sans-serif;font-weight:500;box-shadow:0 8px 30px rgba(0,0,0,0.2);transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1);z-index:999;}
 .toast.show{transform:translateX(-50%) translateY(0)}
- 
+
 @media(max-width:480px){.hero h1{font-size:28px}.letter-grid{grid-template-columns:repeat(auto-fill,minmax(28px,1fr))}.actual-grid{grid-template-columns:1fr}.special-options-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
- 
+
 <!-- =============================================
   POOL CONFIGURATION — edit these for each new pool
   ============================================= -->
@@ -187,7 +187,7 @@ const POOL_CONFIG = {
 };
 </script>
 <!-- ============================================= -->
- 
+
 <header class="site-header">
   <div class="logo" id="logo-click">
     BabyPool 2.0
@@ -195,37 +195,37 @@ const POOL_CONFIG = {
   </div>
   <button class="header-btn" id="add-hunches-btn" onclick="document.getElementById('add-hunches').scrollIntoView({behavior:'smooth'})">Add Hunches</button>
 </header>
- 
+
 <div class="hero">
   <div class="photo-frame">
-    <img src="https://sups-ai.github.io/SAbabypool/default-photo.jpg" id="hero-photo"
+    <img src="https://sups-ai.github.io/SAbabypool/default-photo.jpg" id="hero-photo" alt="Shria and Adil" style="width:100%;height:auto;display:block;" />
   </div>
   <h1 id="hero-title">Baby Girl is brewing...but first, coffee.</h1>
   <p id="hero-body">Shria and Adil are welcoming a baby girl, due next month. Guess date of birth, time, weight, length, and first letter of her name. Submit by <strong style="color:white" id="hero-deadline">April 12th</strong>.</p>
   <div class="deadline-pill" id="hero-due">Due Date: April 25th</div><br>
   <button class="cta-btn" id="hero-cta" onclick="document.getElementById('add-hunches').scrollIntoView({behavior:'smooth'})">Submit My Hunches</button>
 </div>
- 
+
 <div class="main">
- 
+
   <!-- Admin Panel -->
   <div id="admin-panel" style="display:none">
     <div class="admin-panel">
       <div class="admin-title">Admin Dashboard</div>
       <div class="admin-sub">BabyPool 2.0 Management</div>
- 
+
       <div id="results-submitted-banner" class="results-submitted-banner" style="display:none">
         ✅ Results have been submitted and are live. All visitors see scores and winner.
         <br><button class="admin-btn danger" style="margin-top:10px" onclick="confirmResetResults()">Remove Results &amp; Reset</button>
       </div>
- 
+
       <div class="admin-tabs">
         <button class="admin-tab active" onclick="switchTab('results')">Submit Results</button>
         <button class="admin-tab" onclick="switchTab('photo')">Update Photo</button>
         <button class="admin-tab" onclick="switchTab('question')">Special Question</button>
         <button class="admin-tab" onclick="switchTab('entries')">Entries</button>
       </div>
- 
+
       <!-- TAB: Submit Results -->
       <div class="admin-section active" id="tab-results">
         <div class="actual-grid">
@@ -246,7 +246,7 @@ const POOL_CONFIG = {
         </div>
         <button class="admin-btn" onclick="submitResults()">Submit Results &amp; Go Live</button>
       </div>
- 
+
       <!-- TAB: Update Photo -->
       <div class="admin-section" id="tab-photo">
         <div class="admin-label">Upload New Photo</div>
@@ -258,7 +258,7 @@ const POOL_CONFIG = {
         <br>
         <button class="admin-btn" id="upload-photo-btn" onclick="uploadPhoto()" style="display:none">Upload &amp; Set as Hero Photo</button>
       </div>
- 
+
       <!-- TAB: Special Question -->
       <div class="admin-section" id="tab-question">
         <p style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:14px;font-family:'Nunito',sans-serif;">Configure the special question shown in the entry form. Changes take effect immediately for all visitors.</p>
@@ -273,19 +273,19 @@ const POOL_CONFIG = {
         </div>
         <button class="admin-btn" onclick="saveSpecialQuestion()">Save Question</button>
       </div>
- 
+
       <!-- TAB: Entries -->
       <div class="admin-section" id="tab-entries">
         <button class="admin-btn secondary" onclick="toggleHunches()">Reveal / Hide Guesses</button>
         <button class="admin-btn secondary" onclick="exportResults()">Export CSV</button>
       </div>
- 
+
       <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.1)">
         <button class="admin-btn secondary" onclick="lockAdmin()" style="font-size:11px;padding:7px 16px;">Lock Admin</button>
       </div>
     </div>
   </div>
- 
+
   <!-- Add Hunches Section -->
   <div id="add-hunches">
     <div class="section-label">Add Hunches</div>
@@ -375,7 +375,7 @@ const POOL_CONFIG = {
       </div>
     </div>
   </div>
- 
+
   <!-- Entries Section -->
   <div id="hunches-section" style="margin-top:40px">
     <div class="section-label">Entries</div>
@@ -393,15 +393,15 @@ const POOL_CONFIG = {
       <div class="empty-state"><div class="icon">Loading entries...</div><p>Fetching submitted hunches.</p></div>
     </div>
   </div>
- 
+
 </div>
- 
+
 <footer style="text-align:center;padding:28px 20px;font-size:12px;color:var(--muted);font-family:'Nunito',sans-serif;border-top:1px solid var(--border)">
   BabyPool 2.0 &nbsp;&bull;&nbsp; <span id="footer-text">Deadline April 12 &nbsp;&bull;&nbsp; Due Date April 25</span>
 </footer>
- 
+
 <div class="toast" id="toast"></div>
- 
+
 <script>
 // =============================================
 // STATE
@@ -413,7 +413,7 @@ let resultsSubmitted = false;
 let currentSpecialQuestion = null;
 let adminUnlocked = false;
 let pendingPhotoFile = null;
- 
+
 // =============================================
 // INIT
 // =============================================
@@ -424,12 +424,12 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('hero-due').textContent = 'Due Date: ' + POOL_CONFIG.DUE_DATE;
   document.getElementById('form-due-hint').textContent = 'Due Date: ' + POOL_CONFIG.DUE_DATE;
   document.getElementById('footer-text').textContent = `Deadline ${POOL_CONFIG.DEADLINE} \u2022 Due Date ${POOL_CONFIG.DUE_DATE}`;
- 
+
   buildLetterGrid();
   setupAdminTrigger();
   loadState();
 });
- 
+
 // =============================================
 // LOAD FULL STATE FROM SHEET
 // =============================================
@@ -443,20 +443,20 @@ async function loadState() {
     const res = await fetch(POOL_CONFIG.SCRIPT_URL + '?action=getState');
     const data = await res.json();
     if (!data.success) throw new Error(data.error);
- 
+
     hunches = data.hunches || [];
     hunchesVisible = data.revealed === true;
     resultsSubmitted = data.resultsSubmitted === true;
- 
+
     // Special question
     currentSpecialQuestion = data.specialQuestion || POOL_CONFIG.DEFAULT_SPECIAL_Q;
     renderSpecialQuestion(currentSpecialQuestion);
- 
+
     // Photo — only apply saved photo if results are live
     if (data.photoUrl && resultsSubmitted) {
       document.getElementById('hero-photo').src = data.photoUrl;
     }
- 
+
     // Hero text / results state
     if (resultsSubmitted) {
       applyResultsState(data);
@@ -465,7 +465,7 @@ async function loadState() {
       document.getElementById('hero-title').textContent = POOL_CONFIG.DEFAULT_HERO_TITLE;
       document.getElementById('hero-body').innerHTML = POOL_CONFIG.DEFAULT_HERO_BODY + ' Submit by <strong style="color:white">' + POOL_CONFIG.DEADLINE + '</strong>.';
     }
- 
+
     // Populate actual values in admin form if results exist
     if (data.actualDob) document.getElementById('actual-dob').value = data.actualDob;
     if (data.actualTob) document.getElementById('actual-tob').value = data.actualTob;
@@ -475,13 +475,13 @@ async function loadState() {
     if (data.actualLetter) document.getElementById('actual-letter').value = data.actualLetter;
     if (data.actualSpecial) document.getElementById('actual-special').value = data.actualSpecial;
     if (data.heroText) document.getElementById('actual-hero-text').value = data.heroText;
- 
+
     // If results submitted, recalculate scores from stored data for display
     if (resultsSubmitted && data.actualDob) {
       calculateScoresLocally(data);
       winnerCalculated = true;
     }
- 
+
     renderHunches();
   } catch(e) {
     console.error('loadState error:', e);
@@ -489,7 +489,7 @@ async function loadState() {
     document.getElementById('hunches-list').innerHTML = '<div class="empty-state"><div class="icon">Could not load</div><p>Unable to fetch entries. Please refresh.</p></div>';
   }
 }
- 
+
 // Apply all visual changes when results are live
 function applyResultsState(data) {
   // Hero text
@@ -504,7 +504,7 @@ function applyResultsState(data) {
   document.getElementById('hunches-collapsed').style.display = 'block';
   document.getElementById('add-hunches-btn').classList.add('hidden');
 }
- 
+
 function revertToDefaultState() {
   document.getElementById('hero-title').textContent = POOL_CONFIG.DEFAULT_HERO_TITLE;
   document.getElementById('hero-body').innerHTML = POOL_CONFIG.DEFAULT_HERO_BODY + ' Submit by <strong style="color:white">' + POOL_CONFIG.DEADLINE + '</strong>.';
@@ -517,7 +517,7 @@ function revertToDefaultState() {
   document.getElementById('results-submitted-banner').style.display = 'none';
   document.getElementById('hero-photo').src = POOL_CONFIG.DEFAULT_PHOTO_URL;
 }
- 
+
 // =============================================
 // SPECIAL QUESTION
 // =============================================
@@ -539,7 +539,7 @@ function renderSpecialQuestion(q) {
     container.appendChild(btn);
   });
 }
- 
+
 // =============================================
 // LETTER GRID
 // =============================================
@@ -555,7 +555,7 @@ function buildLetterGrid() {
     document.getElementById('letter-grid').appendChild(btn);
   });
 }
- 
+
 let notifWants = false;
 function toggleNotif(btn, wants) {
   notifWants = wants;
@@ -563,14 +563,14 @@ function toggleNotif(btn, wants) {
   btn.classList.add('selected');
   document.getElementById('email-fields').classList.toggle('visible', wants);
 }
- 
+
 // =============================================
 // SUBMIT HUNCH
 // =============================================
 async function submitHunch() {
   const fname = document.getElementById('fname').value.trim();
   if (!fname) { showStatus('Please enter your first name.', 'error'); return; }
- 
+
   const hunch = {
     fname,
     lname: document.getElementById('lname').value.trim(),
@@ -587,13 +587,13 @@ async function submitHunch() {
     email: notifWants ? document.getElementById('email').value.trim() : '',
     timestamp: new Date().toISOString()
   };
- 
+
   const btn = document.getElementById('submit-btn');
   btn.disabled = true;
   btn.textContent = 'Submitting...';
   document.getElementById('submit-loading').classList.add('active');
   clearStatus();
- 
+
   try {
     const params = new URLSearchParams({ action: 'submit', data: JSON.stringify(hunch) });
     const res = await fetch(POOL_CONFIG.SCRIPT_URL + '?' + params.toString());
@@ -616,7 +616,7 @@ async function submitHunch() {
     document.getElementById('submit-loading').classList.remove('active');
   }
 }
- 
+
 function resetForm() {
   ['fname','lname','dob','tob','weight-lbs','weight-oz','length','comment','location','relation','special-answer','email','email2'].forEach(id => {
     const el = document.getElementById(id);
@@ -629,7 +629,7 @@ function resetForm() {
   document.getElementById('email-fields').classList.remove('visible');
   notifWants = false;
 }
- 
+
 // =============================================
 // SCORING (local, mirrors backend)
 // =============================================
@@ -641,7 +641,7 @@ function calculateScoresLocally(data) {
   const actualLen = parseFloat(data.actualLen) || null;
   const actualLetter = (data.actualLetter || '').toUpperCase().trim();
   const actualSpecial = (data.actualSpecial || '').trim();
- 
+
   hunches.forEach(h => {
     // If score already stored in sheet, use it
     if (h.score !== '' && h.score !== null && h.score !== undefined && !isNaN(Number(h.score))) {
@@ -689,7 +689,7 @@ function calculateScoresLocally(data) {
     h.score = score;
   });
 }
- 
+
 // =============================================
 // RENDER HUNCHES
 // =============================================
@@ -697,19 +697,19 @@ function renderHunches() {
   const list = document.getElementById('hunches-list');
   const lockBanner = document.getElementById('lock-banner');
   lockBanner.style.display = hunchesVisible ? 'none' : 'block';
- 
+
   if (hunches.length === 0) {
     list.innerHTML = '<div class="empty-state"><div class="icon">No entries yet</div><p>Be the first to submit your hunches above.</p></div>';
     document.getElementById('winner-spotlight').classList.remove('visible');
     return;
   }
- 
+
   // Sort: scored entries by score desc, unscored at bottom
   const scored = hunches.filter(h => h.score !== null && h.score !== undefined && h.score !== '')
     .slice().sort((a, b) => Number(b.score) - Number(a.score));
   const unscored = hunches.filter(h => h.score === null || h.score === undefined || h.score === '');
   const sorted = [...scored, ...unscored];
- 
+
   // Dense ranking with ties
   let rank = 1;
   sorted.forEach((h, i) => {
@@ -720,9 +720,9 @@ function renderHunches() {
       h._rank = rank;
     }
   });
- 
+
   const maxScore = winnerCalculated && scored.length > 0 ? Number(scored[0].score) : -1;
- 
+
   // Winner spotlight
   if (winnerCalculated && scored.length > 0) {
     const winners = sorted.filter(h => h.score !== null && Number(h.score) === maxScore);
@@ -740,13 +740,13 @@ function renderHunches() {
   } else {
     document.getElementById('winner-spotlight').classList.remove('visible');
   }
- 
+
   const rankLabel = r => {
     if (r === null) return '';
     const s = r === 1 ? 'st' : r === 2 ? 'nd' : r === 3 ? 'rd' : 'th';
     return `${r}${s}`;
   };
- 
+
   list.innerHTML = sorted.map(h => {
     const isWinner = winnerCalculated && h.score !== null && h.score !== '' && Number(h.score) === maxScore;
     const rl = rankLabel(h._rank);
@@ -776,7 +776,7 @@ function renderHunches() {
       </div>`;
   }).join('');
 }
- 
+
 // =============================================
 // ADMIN: SUBMIT RESULTS
 // =============================================
@@ -790,21 +790,21 @@ async function submitResults() {
   const actualSpecial = document.getElementById('actual-special').value.trim();
   const heroText = document.getElementById('actual-hero-text').value.trim() ||
                    'Welcome to the world!';
- 
+
   if (!actualDob) { alert('Please enter the date of birth before submitting results.'); return; }
- 
+
   // Calculate scores locally first
   // Force fresh calculation — ignore any previously stored scores
   hunches.forEach(h => { h.score = null; });
   calculateScoresLocally({ actualDob, actualTob, actualLbs, actualOz, actualLen, actualLetter, actualSpecial });
   winnerCalculated = true;
- 
+
   const scores = hunches.map(h => ({
     fname: h.fname, lname: h.lname || '', score: h.score !== null ? h.score : 0
   }));
- 
+
   const payload = { actualDob, actualTob, actualLbs, actualOz, actualLen, actualLetter, actualSpecial, heroText, scores };
- 
+
   try {
     const params = new URLSearchParams({ action: 'saveResults', data: JSON.stringify(payload) });
     const res = await fetch(POOL_CONFIG.SCRIPT_URL + '?' + params.toString());
@@ -823,7 +823,7 @@ async function submitResults() {
     alert('Connection error. Please try again.');
   }
 }
- 
+
 // =============================================
 // ADMIN: RESET RESULTS
 // =============================================
@@ -831,7 +831,7 @@ function confirmResetResults() {
   if (!confirm('Remove results? This will clear scores, restore the original hero text, and re-open submissions. This cannot be undone.')) return;
   resetResultsAction();
 }
- 
+
 async function resetResultsAction() {
   try {
     const res = await fetch(POOL_CONFIG.SCRIPT_URL + '?action=resetResults');
@@ -852,7 +852,7 @@ async function resetResultsAction() {
     alert('Connection error.');
   }
 }
- 
+
 // =============================================
 // ADMIN: PHOTO UPLOAD
 // =============================================
@@ -869,7 +869,7 @@ function previewPhoto(input) {
   };
   reader.readAsDataURL(pendingPhotoFile);
 }
- 
+
 async function uploadPhoto() {
   if (!pendingPhotoFile) return;
   const btn = document.getElementById('upload-photo-btn');
@@ -881,13 +881,13 @@ async function uploadPhoto() {
       const dataUrl = e.target.result;
       const base64 = dataUrl.split(',')[1];
       const mimeType = pendingPhotoFile.type || 'image/jpeg';
- 
+
       const formData = new FormData();
       formData.append('action', 'uploadPhoto');
       formData.append('base64', base64);
       formData.append('mimeType', mimeType);
       formData.append('fileName', pendingPhotoFile.name);
- 
+
       const res = await fetch(POOL_CONFIG.SCRIPT_URL, {
         method: 'POST',
         body: formData
@@ -909,7 +909,7 @@ async function uploadPhoto() {
     btn.textContent = 'Upload & Set as Hero Photo';
   }
 }
- 
+
 // =============================================
 // ADMIN: SPECIAL QUESTION
 // =============================================
@@ -935,7 +935,7 @@ async function saveSpecialQuestion() {
     alert('Connection error.');
   }
 }
- 
+
 // =============================================
 // ADMIN: TOGGLE HUNCHES / EXPORT
 // =============================================
@@ -945,7 +945,7 @@ async function toggleHunches() {
   await fetch(POOL_CONFIG.SCRIPT_URL + '?action=setRevealed&value=' + hunchesVisible);
   showToast(hunchesVisible ? 'Guesses revealed' : 'Guesses hidden');
 }
- 
+
 function exportResults() {
   if (hunches.length === 0) { alert('No hunches to export.'); return; }
   const lines = ['Name,Date,Time,Weight,Length,Letter,Special,Location,Relation,Comment,Score'];
@@ -967,7 +967,7 @@ function exportResults() {
   a.download = 'baby-pool-results.csv';
   a.click();
 }
- 
+
 // =============================================
 // ADMIN PANEL
 // =============================================
@@ -980,7 +980,7 @@ function setupAdminTrigger() {
     timer = setTimeout(() => { clicks = 0; }, 1500);
   });
 }
- 
+
 function promptAdmin() {
   if (adminUnlocked) { document.getElementById('admin-panel').scrollIntoView({ behavior: 'smooth' }); return; }
   const pw = prompt('Admin Password:');
@@ -1001,19 +1001,19 @@ function promptAdmin() {
     alert('Incorrect password.');
   }
 }
- 
+
 function lockAdmin() {
   adminUnlocked = false;
   document.getElementById('admin-panel').style.display = 'none';
 }
- 
+
 function switchTab(tab) {
   document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
   document.getElementById('tab-' + tab).classList.add('active');
   event.target.classList.add('active');
 }
- 
+
 // =============================================
 // HELPERS
 // =============================================
@@ -1023,7 +1023,7 @@ function fmtDate(d) {
   if (isNaN(date)) return d;
   return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 }
- 
+
 function fmtTime(t) {
   if (!t) return '';
   if (String(t).includes('T')) {
@@ -1041,20 +1041,20 @@ function fmtTime(t) {
   h = h % 12 || 12;
   return `${h}:${min} ${ap}`;
 }
- 
+
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
   t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 3000);
 }
- 
+
 function showStatus(msg, type) {
   const el = document.getElementById('status-msg');
   el.textContent = msg;
   el.className = 'status-msg ' + type;
 }
- 
+
 function clearStatus() {
   const el = document.getElementById('status-msg');
   el.className = 'status-msg';
@@ -1062,6 +1062,4 @@ function clearStatus() {
 }
 </script>
 </body>
-</html>
- 
 </html>
