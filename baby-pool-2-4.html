@@ -448,7 +448,7 @@ function renderHunches() {
       <div class="hunch-detail">
         ${h.dob?`<span>Date: ${fmtDate(h.dob)}</span>`:''}
         ${h.tob?`<span>Time: ${fmtTime(h.tob)}</span>`:''}
-        ${(h.lbs||h.oz)?`<span>Weight: ${h.lbs||'?'} lbs ${h.oz||'?'} oz</span>`:''}
+        ${(h.lbs !== '' && h.lbs !== null && h.lbs !== undefined) || (h.oz !== '' && h.oz !== null && h.oz !== undefined) ? `<span>Weight: ${(h.lbs !== '' && h.lbs !== null && h.lbs !== undefined) ? h.lbs : '?'} lbs ${(h.oz !== '' && h.oz !== null && h.oz !== undefined) ? h.oz : '?'} oz</span>` : ''}
         ${h.len?`<span>Length: ${h.len} in</span>`:''}
         ${h.letter?`<span>Letter: "${h.letter}"</span>`:''}
         ${h.cried?`<span>Cried first: ${h.cried}</span>`:''}
