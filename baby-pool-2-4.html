@@ -792,6 +792,7 @@ async function submitResults() {
   if (!actualDob) { alert('Please enter the date of birth before submitting results.'); return; }
  
   // Calculate scores locally first
+  hunches.forEach(h => { h.score = null; }); // force fresh calculation
   calculateScoresLocally({ actualDob, actualTob, actualLbs, actualOz, actualLen, actualLetter, actualSpecial });
   winnerCalculated = true;
  
