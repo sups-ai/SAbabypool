@@ -452,8 +452,8 @@ async function loadState() {
     currentSpecialQuestion = data.specialQuestion || POOL_CONFIG.DEFAULT_SPECIAL_Q;
     renderSpecialQuestion(currentSpecialQuestion);
  
-    // Photo
-    if (data.photoUrl) {
+    // Photo — only apply saved photo if results are live
+    if (data.photoUrl && resultsSubmitted) {
       document.getElementById('hero-photo').src = data.photoUrl;
     }
  
@@ -1062,4 +1062,6 @@ function clearStatus() {
 }
 </script>
 </body>
+</html>
+ 
 </html>
