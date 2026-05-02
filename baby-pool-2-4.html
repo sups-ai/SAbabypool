@@ -877,13 +877,17 @@ async function uploadPhoto() {
       const dataUrl = e.target.result;
       const base64 = dataUrl.split(',')[1];
       const mimeType = pendingPhotoFile.type || 'image/jpeg';
-      const params = new URLSearchParams({
-        action: 'uploadPhoto',
-        base64,
-        mimeType,
-        fileName: pendingPhotoFile.name
+ 
+      const formData = new FormData();
+      formData.append('action', 'uploadPhoto');
+      formData.append('base64', base64);
+      formData.append('mimeType', mimeType);
+      formData.append('fileName', pendingPhotoFile.name);
+ 
+      const res = await fetch(POOL_CONFIG.SCRIPT_URL, {
+        method: 'POST',
+        body: formData
       });
-      const res = await fetch(POOL_CONFIG.SCRIPT_URL + '?' + params.toString());
       const data = await res.json();
       if (data.success) {
         document.getElementById('hero-photo').src = data.url;
