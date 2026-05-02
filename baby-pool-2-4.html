@@ -174,11 +174,11 @@ const POOL_CONFIG = {
   DUE_DATE: 'April 25th',
   DEADLINE: 'April 12th',
   BABY_GENDER: 'girl',
-  DEFAULT_PHOTO_URL: 'https://sups-ai.github.io/SAbabypool/default-photo.jpg',
   DEFAULT_HERO_TITLE: 'Baby Girl is brewing...but first, coffee.',
   DEFAULT_HERO_BODY: 'Shria and Adil are welcoming a baby girl, due next month. Guess date of birth, time, weight, length, and first letter of her name.',
   ADMIN_PASS: 'baby2025',
   // Default special question (overridden by admin config saved to sheet)
+  DEFAULT_PHOTO_URL: 'https://sups-ai.github.io/SAbabypool/default-photo.jpg',
   DEFAULT_SPECIAL_Q: {
     question: 'Who Cried First After Baby Was Born?',
     options: ['Adil', 'Shria'],
@@ -515,6 +515,7 @@ function revertToDefaultState() {
   document.getElementById('add-hunches-btn').classList.remove('hidden');
   document.getElementById('winner-spotlight').classList.remove('visible');
   document.getElementById('results-submitted-banner').style.display = 'none';
+  document.getElementById('hero-photo').src = POOL_CONFIG.DEFAULT_PHOTO_URL;
 }
  
 // =============================================
@@ -793,7 +794,8 @@ async function submitResults() {
   if (!actualDob) { alert('Please enter the date of birth before submitting results.'); return; }
  
   // Calculate scores locally first
-  hunches.forEach(h => { h.score = null; }); // force fresh calculation
+  // Force fresh calculation — ignore any previously stored scores
+  hunches.forEach(h => { h.score = null; });
   calculateScoresLocally({ actualDob, actualTob, actualLbs, actualOz, actualLen, actualLetter, actualSpecial });
   winnerCalculated = true;
  
